@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="...">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #A79277;
+            color: #FFF2E1;
+        }
+
+        .nav-style {
+            background-color: #D1BB9E;
+        }
+
+        .card {
+            background-color: #D1BB9E;
+            color: white;
+        }
+
+        footer {
+            background-color: #D1BB9E;
+            color: #FFF2E1;
+            font-weight: bold;
+        }
+
+        .swiper {
+            width: 100%;
+            height: auto;
+        }
+
+        section #home {
+            height: 100vh;
+        }
+
+        section #contact {
+            height: auto;
+        }
+
+
+        /* Menu or Navbar Hover Line */
+        .navbar-nav .nav-link {
+            position: relative;
+            color: #FFF2E1;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFF2E1;
+            transition: width 0.5s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: black;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+
+        .text-twitter,
+        .text-youtube,
+        .text-facebook {
+            color: #FFF2E1;
+        }
+
+        .text-twitter:hover {
+            color: #1DA1F2;
+            /* Twitter Blue */
+            transform: scale(1.1);
+            /* Increase scale on hover */
+            transition: transform 0.3s;
+            /* Smooth transition */
+        }
+
+        .text-youtube:hover {
+            color: #FF0000;
+            /* YouTube Red */
+            transform: scale(1.1);
+            /* Increase scale on hover */
+            transition: transform 0.3s;
+            /* Smooth transition */
+        }
+
+        .text-facebook:hover {
+            color: #1877F2;
+            /* Facebook Blue */
+            transform: scale(1.1);
+            /* Increase scale on hover */
+            transition: transform 0.3s;
+            /* Smooth transition */
+        }
+
+
+        /* Mobile Size */
+        @media screen and (max-width: 767px) {
+            section #home {
+                height: 50%;
+            }
+
+            .insertGap {
+                gap: 44px;
+            }
+
+            section #contact {
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-light" id="home">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top nav-style">
+            <div class="container-fluid">
+                <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand order-lg-0 ms-auto me-0 fw-bold fs-3 d-none d-lg-block" href="#home"><img
+                        src="img/luxegem.png" alt="LOGO" class="object-fit-contain" style="height: 50px;width: 50px;">
+                    ALARIC</a>
+
+                <div class="collapse navbar-collapse order-lg-1 justify-content-end" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-3 fw-bold fs-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slider main container -->
+        <div class="swiper bg-light">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="img/image1.jpeg" alt="image 1" class="object-fit-fill" style="width:100%;height: 550px;">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/image2.jpg" alt="image 2" class="object-fit-fill" style="width:100%;height: 550px;">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/image3.jpg" alt="image 3" class="object-fit-fill" style="width:100%;height: 550px;">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="py-3 h-100" id="products">
+        <div class="container">
+            <h2 class="text-center fs-1" style="margin:6rem 0 3rem 0;">Products
+                <hr>
+            </h2>
+            <div class="row justify-content-evenly align-items-center h-100 insertGap">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card rounded shadow" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-header bg-light text-center py-4">
+                            <img src="img/neck1.png" alt="jewelry 1" class="object-fit-contain"
+                                style="width:auto;height: 150px;">
+                        </div>
+                        <div class="card-body p-3">
+                            <h4>Betsey Johnson Woven Layered Necklace</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+                                quae assumenda
+                                suscipit, ut id dolorum perferendis quia consectetur odio nisi!</pc>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card rounded shadow" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-header bg-light text-center py-4">
+                            <img src="img/neck2.png" alt="jewelry 1" class="object-fit-contain"
+                                style="width:auto;height: 150px;">
+                        </div>
+                        <div class="card-body p-3">
+                            <h4>Sparkling Love Heart Moissanite Necklace</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                                eligendi at ut aperiam,
+                                reprehenderit facere vero architecto asperiores unde pariatur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card rounded shadow" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-header bg-light text-center py-4">
+                            <img src="img/ring1.png" alt="jewelry 1" class="object-fit-contain"
+                                style="width:auto;height: 150px;">
+                        </div>
+                        <div class="card-body p-3">
+                            <h4>Gold Diamond-Accent Twist Promise Ring</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                harum, facilis
+                                mollitia temporibus quibusdam exercitationem?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-evenly align-items-center h-100 mt-5 insertGap">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card rounded shadow" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-header bg-light text-center py-4">
+                            <img src="img/ring2.png" alt="jewelry 1" class="object-fit-contain"
+                                style="width:auto;height: 150px;">
+                        </div>
+                        <div class="card-body p-3">
+                            <h4>Diamond Promise Ring in Sterling Silver</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni
+                                quod iste. Quod,
+                                facere tenetur earum laboriosam expedita deleniti accusantium?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card rounded shadow" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-header bg-light text-center py-4">
+                            <img src="img/bracelet1.png" alt="jewelry 1" class="object-fit-contain"
+                                style="width:auto;height: 150px;">
+                        </div>
+                        <div class="card-body p-3">
+                            <h4>Kendra Scott Chantal Beaded Bracelet</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse autem,
+                                hic dolorem
+                                accusantium perspiciatis minus sit tempora reprehenderit atque voluptatem!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card rounded shadow" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-header bg-light text-center py-4">
+                            <img src="img/bracelet2.png" alt="jewelry 1" class="object-fit-contain"
+                                style="width:auto;height: 150px;">
+                        </div>
+                        <div class="card-body p-3">
+                            <h4>Sterling Silver Tree Jewelry Birthstone Charm Bracelet</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                                repellendus architecto
+                                culpa magnam velit harum dicta sint adipisci illo quidem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3 vh-100 mb-5" id="about">
+        <div class="container">
+            <h2 class="text-center fs-1" style="margin:6rem 0 3rem 0;">About
+                <hr>
+            </h2>
+
+            <div class="row justify-content-evenly align-items-center insertGap">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card shadow rounded p-2" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-body">
+                            <div class="text-center py-3">
+                                <p style="font-size:3rem;"><i class="fa-solid fa-gem fa-2xl"></i></p>
+                            </div>
+                            <div class="text-center">
+                                <h4>Authenticity and Materials</h4>
+                                <p>Ensuring that all jewelry pieces are made from genuine materials
+                                    such as gold, silver, diamonds, gemstones, etc., with accurate descriptions of their
+                                    quality and origins.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="card shadow rounded p-2" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-body">
+                            <div class="text-center py-3">
+                                <p style="font-size:3rem;"><i class="fa-solid fa-hand-fist fa-2xl"></i></p>
+                            </div>
+                            <div class="text-center">
+                                <h4>Durability and Longevity</h4>
+                                <p>Providing assurance that the jewelry is designed to withstand
+                                    everyday wear and tear, maintaining its beauty and integrity over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="card shadow rounded p-2" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card-body">
+                            <div class="text-center py-3">
+                                <p style="font-size:3rem;"><i class="fa-solid fa-heart fa-2xl"></i></p>
+                            </div>
+                            <div class="text-center">
+                                <h4>Customer Reviews</h4>
+                                <p>Highlighting customer reviews and testimonials that affirm the
+                                    quality of products and satisfaction with the overall shopping experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="h-auto py-4" id="contact" style="margin-top: 8rem;">
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center mb-4">
+                    <div class="col">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <a href="#home" class="text-light">Home</a>
+                            <a href="#products" class="text-light">Products</a>
+                            <a href="#about" class="text-light">About</a>
+                            <a href="#contact" class="text-light">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center gap-4 mb-4">
+                    <a href="#contact" class="text-twitter"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                    <a href="#contact" class="text-youtube"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+                    <a href="#contact" class="text-facebook"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                </div>
+
+                <div class="text-center">
+                    <p>Copyright © 2024 - All rights reserved by LARCA Jewelry</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000, // Autoplay delay in milliseconds
+                disableOnInteraction: false, // Prevents autoplay from stopping when the user interacts with the slider
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+        AOS.init();
+    </script>
+</body>
+
+</html>
